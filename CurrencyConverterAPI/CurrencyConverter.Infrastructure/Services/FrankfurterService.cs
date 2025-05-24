@@ -7,6 +7,7 @@ using Microsoft.Extensions.Logging;
 using Polly;
 using Polly.CircuitBreaker;
 using Polly.Retry;
+using static System.Net.WebRequestMethods;
 
 namespace CurrencyConverter.Infrastructure.Services
 {
@@ -18,6 +19,7 @@ namespace CurrencyConverter.Infrastructure.Services
         private readonly ILogger<FrankfurterService> _logger;
         private readonly AsyncRetryPolicy _retryPolicy;
         private AsyncCircuitBreakerPolicy _circuitBreakerPolicy;
+        private readonly string _franFurtServiceUrl = "https://api.frankfurter.app/";
 
         public FrankfurterService(HttpClient httpClient, IMemoryCache cache, ILogger<FrankfurterService> logger)
         {
@@ -39,7 +41,7 @@ namespace CurrencyConverter.Infrastructure.Services
                 throw new ArgumentException("Conversion with TRY, PLN, THB, or MXN is not allowed.");
             }
 
-            var url = $"https://api.frankfurter.app/latest?amount={amount}&from={from.ToUpper()}&to={to.ToUpper()}";
+            var url = $"{_franFurtServiceUrl}latest?amount={amount}&from={from.ToUpper()}&to={to.ToUpper()}";
 
             var response = await _circuitBreakerPolicy.ExecuteAsync(() =>
                 _retryPolicy.ExecuteAsync(() => _httpClient.GetAsync(url)));
@@ -61,7 +63,7 @@ namespace CurrencyConverter.Infrastructure.Services
 
         public async Task<PaginatedResult<ExchangeRate>> GetHistoricalRatesAsync(string baseCurrency, DateTime start, DateTime end, int page, int pageSize)
         {
-            var url = $"https://api.frankfurter.app/{start:yyyy-MM-dd}..{end:yyyy-MM-dd}?from={baseCurrency.ToUpper()}";
+            var url = $"{_franFurtServiceUrl}{start:yyyy-MM-dd}..{end:yyyy-MM-dd}?from={baseCurrency.ToUpper()}";
 
             var response = await _circuitBreakerPolicy.ExecuteAsync(() =>
                 _retryPolicy.ExecuteAsync(() => _httpClient.GetAsync(url)));
@@ -112,7 +114,7 @@ namespace CurrencyConverter.Infrastructure.Services
                 return cachedRate;
 
             var response = await _retryPolicy.ExecuteAsync(() =>
-                _httpClient.GetFromJsonAsync<ExchangeRate>($"https://api.frankfurter.app/latest?base={baseCurrency}")
+                _httpClient.GetFromJsonAsync<ExchangeRate>($"{_franFurtServiceUrl}latest?base={baseCurrency}")
             );
 
             _cache.Set($"latest-{baseCurrency}", response, TimeSpan.FromMinutes(30));
