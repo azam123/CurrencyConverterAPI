@@ -1,0 +1,16 @@
+C:\Azam\Learning\CurrencyConverterAPI\CurrencyConverterAPI\CurrencyConverter.Application\bin\Debug\net8.0\CurrencyConverter.Application.deps.json
+C:\Azam\Learning\CurrencyConverterAPI\CurrencyConverterAPI\CurrencyConverter.Application\bin\Debug\net8.0\CurrencyConverter.Application.dll
+C:\Azam\Learning\CurrencyConverterAPI\CurrencyConverterAPI\CurrencyConverter.Application\bin\Debug\net8.0\CurrencyConverter.Application.pdb
+C:\Azam\Learning\CurrencyConverterAPI\CurrencyConverterAPI\CurrencyConverter.Application\obj\Debug\net8.0\CurrencyConverter.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Azam\Learning\CurrencyConverterAPI\CurrencyConverterAPI\CurrencyConverter.Application\obj\Debug\net8.0\CurrencyConverter.Application.AssemblyInfoInputs.cache
+C:\Azam\Learning\CurrencyConverterAPI\CurrencyConverterAPI\CurrencyConverter.Application\obj\Debug\net8.0\CurrencyConverter.Application.AssemblyInfo.cs
+C:\Azam\Learning\CurrencyConverterAPI\CurrencyConverterAPI\CurrencyConverter.Application\obj\Debug\net8.0\CurrencyConverter.Application.csproj.CoreCompileInputs.cache
+C:\Azam\Learning\CurrencyConverterAPI\CurrencyConverterAPI\CurrencyConverter.Application\obj\Debug\net8.0\CurrencyConverter.Application.sourcelink.json
+C:\Azam\Learning\CurrencyConverterAPI\CurrencyConverterAPI\CurrencyConverter.Application\obj\Debug\net8.0\CurrencyConverter.Application.dll
+C:\Azam\Learning\CurrencyConverterAPI\CurrencyConverterAPI\CurrencyConverter.Application\obj\Debug\net8.0\refint\CurrencyConverter.Application.dll
+C:\Azam\Learning\CurrencyConverterAPI\CurrencyConverterAPI\CurrencyConverter.Application\obj\Debug\net8.0\CurrencyConverter.Application.pdb
+C:\Azam\Learning\CurrencyConverterAPI\CurrencyConverterAPI\CurrencyConverter.Application\obj\Debug\net8.0\ref\CurrencyConverter.Application.dll
+C:\Azam\Learning\CurrencyConverterAPI\CurrencyConverterAPI\CurrencyConverter.Application\bin\Debug\net8.0\CurrencyConverter.Domain.dll
+C:\Azam\Learning\CurrencyConverterAPI\CurrencyConverterAPI\CurrencyConverter.Application\bin\Debug\net8.0\CurrencyConverter.Domain.pdb
+C:\Azam\Learning\CurrencyConverterAPI\CurrencyConverterAPI\CurrencyConverter.Application\obj\Debug\net8.0\CurrencyConverter.Application.csproj.AssemblyReference.cache
+C:\Azam\Learning\CurrencyConverterAPI\CurrencyConverterAPI\CurrencyConverter.Application\obj\Debug\net8.0\Currency.FC9E407D.Up2Date
